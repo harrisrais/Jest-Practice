@@ -1,10 +1,5 @@
 # javascript-testing-with-jest-crash-course
 
-**One-line description:** Practical exercises and notes from the *JavaScript Testing with Jest – Crash Course* (FreeCodeCamp) — sample tests, cheatsheet, and setup instructions.
-
----
-
-## About this repo
 This repository contains example code, tests, and notes created while following the **JavaScript Testing with Jest – Crash Course** video. It demonstrates setting up **Jest**, writing synchronous & asynchronous tests, using mocks and snapshots, and running tests with coverage/watch.
 
 ---
@@ -87,4 +82,5 @@ Video: JavaScript Testing with Jest – Crash Course
  (FreeCodeCamp)
 
 Jest official docs: https://jestjs.io/
+
 
