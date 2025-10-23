@@ -14,13 +14,22 @@
 //     expect(data).toEqual({one: 1, two: 2});
 // });
 
-test('null is falsy', () => {
-    const n = null;
-    expect(n).toBeFalsy();
-});
+// test('null is falsy', () => {
+//     const n = null;
+//     expect(n).toBeFalsy();
+// });
+
+const myFunc = require('./sum');
+test('throws on invalid input', () => {
+    expect(() => {
+        myFunc(2);
+        // myFunc("2");
+    }).toThrow();
+})
 
 /*matchers
 > toBe is used for primitive values (numbers, strings and booleans)
 > toEqual is used when comparing the values of objects or arrays
 > toBeFalsy is used to check if value is null, undefined, blank, zero, false
+> toThrow is used for error handling, to check if the function thows errs or not when there's an error
 */

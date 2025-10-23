@@ -7,3 +7,11 @@ function sum(a, b){
 // }
 
 module.exports = sum
+
+function myFunc (input){
+    if (typeof input != 'number'){
+        throw new Error('Invalid Input')
+    }
+}
+
+module.exports = myFunc
