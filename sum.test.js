@@ -19,17 +19,45 @@
 //     expect(n).toBeFalsy();
 // });
 
-const myFunc = require('./sum');
-test('throws on invalid input', () => {
-    expect(() => {
-        myFunc(2);
-        // myFunc("2");
-    }).toThrow();
+// const myFunc = require('./sum');
+// test('throws on invalid input', () => {
+//     expect(() => {
+//         myFunc(2);
+//         // myFunc("2");
+//     }).toThrow();
+// })
+
+// const fetchData = require('./sum')
+// test('the data is peanut butter', done => {
+//     function callback(data) {
+//         try {
+//             expect(data).toBe('peanut butter');
+//             done();
+//         } catch (error) {
+//             done(error);
+//         }
+//     }
+//     fetchData(callback);
+// });
+
+const fetchPromise = require('./sum')
+
+// test('the data is peanut butter', () => {
+//     return expect(fetchPromise()).resolves.toBe('eanut butter');
+// });
+
+// test('the fetch fails with an Error', () => {
+//     return expect(fetchPromise()).rejects.toThrow('error');
+// });
+
+test('the dtaa is peanut butter', async () => {
+    const data = await fetchPromise();
+    expect(data).toBe('peanut butter');
 })
 
-/*matchers
-> toBe is used for primitive values (numbers, strings and booleans)
-> toEqual is used when comparing the values of objects or arrays
-> toBeFalsy is used to check if value is null, undefined, blank, zero, false
-> toThrow is used for error handling, to check if the function thows errs or not when there's an error
+/* MATCHERS
+> 'toBe' is used for primitive values (numbers, strings and booleans)
+> 'toEqual' is used when comparing the values of objects or arrays
+> 'toBeFalsy' is used to check if value is null, undefined, blank, zero, false
+> 'toThrow' is used for error handling, to check if the function thows errs or not when there's an error
 */
